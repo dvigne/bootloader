@@ -2,11 +2,12 @@ org 7C00h
 
 jmp short _start
 
-msg db "Hello World"
+msg db "Derick Vigne Custom Bootloader"
 len equ $ - msg
 
 _start:
-  mov ah, 6
+  mov ah, 0
+  mov al, 3
   int 10h
   mov ax, 0x0
   mov es, ax
